@@ -3,7 +3,6 @@ nav {
     display: flex;
     flex-wrap: nowrap;
     justify-content: flex-start;
-    background-color: rgba(92, 140, 140, 0.4);
 }
 body {
     background-color: rgb(69, 80, 80);
