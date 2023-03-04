@@ -1,13 +1,3 @@
-function displaymenu(){
-    var navlinks = document.getElementById("navcontent");
-
-    if(navlinks.style.display == "block"){
-        navlinks.style.display = "none";
-    }
-    else{
-        navlinks.style.display = "block";
-    }
-}
 function displaymenu(id){
     var navlinks = document.getElementById(id);
     var kids = navlinks.children;

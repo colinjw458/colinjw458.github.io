@@ -4,15 +4,22 @@
     <meta charset="UTF-8">
 	<title>My Form - Colin White</title>
     <link rel="stylesheet" href="mystyle.css">
-    <script src="displaymenu.js"></script>
+    <script src="/webpages/displaymenu.js"></script>
 </head>
 <body>
     <nav>
-        <button class="navbutton" onclick="displaymenu()">Menu (Click Me)</button>
-        <div id="navcontent">
+        <div class="navcontent">
+            <button class="navbutton" onclick="window.location='../index.html'">Home</button>
+        </div>
+        <div class="navcontent" id="nav1">
+            <button class="navbutton" onclick="displaymenu('nav1')">My Webpages</button>
             <a href="./MySchedule.html">My Schedule</a>
             <a href="./MyForm.html">My Form</a>
             <a href="./AboutMe.html">About Me</a>
+        </div>
+        <div class="navcontent" id="nav2">
+            <button class="navbutton" onclick="displaymenu('nav2')">My Games</button>
+            <a href="https://csci-4611-spring-2023.github.io/assignment-1-colinjw458/">Spacestroids</a>
         </div>
     </nav>
 

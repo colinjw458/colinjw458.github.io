@@ -7,7 +7,6 @@ nav {
 }
 body {
     background-color: rgb(69, 80, 80);
-    background-image: url(./img/pexels-pixabay-290595.jpg);
 }
 #tables {
     display: flex;
