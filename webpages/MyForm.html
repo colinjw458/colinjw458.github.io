@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>My Form - Colin White</title>
+    <link rel="stylesheet" href="mystyle.css">
+    <script src="displaymenu.js"></script>
+</head>
+<body>
+    <nav>
+        <button class="navbutton" onclick="displaymenu()">Menu (Click Me)</button>
+        <div id="navcontent">
+            <a href="./MySchedule.html">My Schedule</a>
+            <a href="./MyForm.html">My Form</a>
+            <a href="./AboutMe.html">About Me</a>
+        </div>
+    </nav>
+
+    <div id="formdiv">
+        <form action="https://www-users.cselabs.umn.edu/~cuixx327/a2.php" method="post">
+            <div class="row">
+                <div class="column"><label for="event">Event:</label></div>
+                <div class="column"><input type="text" id="event" name="event" pattern="^[a-zA-z0-9 ]+" required></div>
+            </div>
+
+            <div class="row">
+                <div class="column"><label for="day">Day of Week:</label></div>
+                <div class="column">
+                    <select id="day" name="day" required>
+                        <option value="sun">Sun</option>
+                        <option value="mon">Mon</option>
+                        <option value="tue">Tue</option>
+                        <option value="wed">Wed</option>
+                        <option value="thu">Thu</option>
+                        <option value="fri">Fri</option>
+                        <option value="sat">Sat</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="column"><label for="start">Start:</label></div>
+                <div class="column"><input type="time" id="start" name="start" maxlength="25" required></div>
+            </div>
+
+            <div class="row">
+                <div class="column"><label for="end">End:</label></div>
+                <div class="column"><input type="time" id="end" name="end" required></div>
+            </div>
+
+            <div class="row">
+                <div class="column"><label for="phone">Phone:</label></div>
+                <div class="column"><input type="text" id="phone" name="phone" pattern="^[1-9][0-9]{9}$" required></div>
+            </div>
+
+            <div class="row">
+                <div class="column"><label for="location">Location (Address):</label></div>
+                <div class="column"><input type="text" id="location" name="location" maxlength="50" pattern="^[a-zA-z0-9 ]+" required></div>
+            </div>
+
+            <div class="row">
+                <div class="column"><label for="extra">Extra Info:</label></div>
+                <div class="column"><input type="text" id="extra" name="extra" maxlength="50" pattern="^[a-zA-z0-9 ]+" required></div>
+            </div>
+
+            <div class="row">
+                <div class="column"><label for="url">Enter URL for the Extra Info:</label></div>
+                <div class="column"><input type="url" id="url" name="url"></div>
+            </div>
+
+            <div class="row">
+                <div class="column"></div>
+                <div class="column"><input type="submit" value="Submit"></div>
+            </div>
+        </form>
+        <div id="aboutmap" onload="initMap()"></div>
+    </div>
+</body>
+
+<script src="myscriptsabout.js"></script>
+<script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkHzK4FvMsqxu3tGhAubsZDDhRd4fYyxk&libraries=places&callback=initMap">
+</script>

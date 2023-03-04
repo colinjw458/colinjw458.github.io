@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My Schedule - Colin White</title>
+	<link rel="stylesheet" href="mystyle.css">
+	<script src="displaymenu.js"></script>
+</head>
+
+<body>
+	<nav>
+		<button class="navbutton" onclick="displaymenu()">Menu (Click Me)</button>
+		<div id="navcontent">
+			<a href="./MySchedule.html">My Schedule</a>
+			<a href="./MyForm.html">My Form</a>
+			<a href="./AboutMe.html">About Me</a>
+		</div>
+	</nav>
+
+	<h1 class="pagetitle">My Weekly Schedule</h1>
+
+	<div id="tables">
+		<table>
+			<tr class="tr1">
+				<th>Day</th>
+				<th>Event</th>
+				<th>Time</th>
+				<th>Location</th>
+				<th>Phone Number</th>
+				<th>URL</th>
+			</tr>
+			<tr class="tr2" onmouseover="changeimg('./img/Tate.png', 'Tate hall'); displaythumb('tate', './img/Tate.png', 'Tate hall')" onmouseout="removethumb('tate')">
+				<td>Monday</td>
+				<td>Internet Programming</td>
+				<td>11:15-12:30 pm</td>
+				<td>311 SE Harvard St<br> <img class="thumbnail" id="tate"></td>
+				<td>No Phone Number</td>
+				<td><a href="https://onestop2.umn.edu/pcas/viewCatalogCourse.do?courseId=790654">Internet Programming info</a></td>
+			</tr>
+			<!--<tr class="tr1" onmouseover="changeimg('./img/rec.jpg', 'Rec Center'); displaythumb('rec1', './img/rec.jpg', 'Rec center')" onmouseout="removethumb('rec1')">
+				<td>Monday</td>
+				<td>Exercise</td>
+				<td>8:30 pm</td>
+				<td>University Recreation and Wellness Center<br> <img class="thumbnail" id="rec1"></td>
+				<td>(612) 626-9222</td>
+				<td><a href="https://recwell.umn.edu/">Rec Center Info</a></td>
+			</tr>-->
+			<tr class="tr2" onmouseover="changeimg('./img/smith.jpg', 'Smith Hall'); displaythumb('smith', './img/smith.jpg', 'Smith hall')" onmouseout="removethumb('smith')">
+				<td>Tuesday</td>
+				<td>Program Design & Development</td>
+				<td>2:30-3:45 pm</td>
+				<td>207 Pleasant St SE, Minneapolis, MN 55455<br> <img class="thumbnail" id="smith"></td>
+				<td>No Phone Number</td>
+				<td><a href="https://onestop2.umn.edu/pcas/viewCatalogCourse.do?courseId=793076">Program Design & Development info</a></td>
+			</tr>
+			<tr class="tr1" onmouseover="changeimg('./img/rec.jpg', 'Rec Center'); displaythumb('rec2', './img/rec.jpg', 'Rec center')" onmouseout="removethumb('rec2')">
+				<td>Tuesday</td>
+				<td>Exercise</td>
+				<td>5:30 pm</td>
+				<td>University Recreation and Wellness Center<br> <img class="thumbnail" id="rec2"></td>
+				<td>(612) 626-9222</td>
+				<td><a href="https://recwell.umn.edu/">Rec Center Info</a></td>
+			</tr>
+			<tr class="tr2" onmouseover="changeimg('./img/keller.jpg', 'Keller hall'); displaythumb('keller', './img/keller.jpg', 'Keller hall')" onmouseout="removethumb('keller')">
+				<td>Wednesday</td>
+				<td>Data Mining</td>
+				<td>2:30-3:45 pm</td>
+				<td>Keller Hall<br> <img class="thumbnail" id="keller"></td>
+				<td>No Phone Number</td>
+				<td><a href="https://onestop2.umn.edu/pcas/viewCatalogCourse.do?courseId=797347">Data Mining info</a></td>
+			</tr>
+			<!--<tr class="tr1" onmouseover="changeimg('./img/rec.jpg', 'Rec Center'); displaythumb('rec3', './img/rec.jpg', 'Rec center')" onmouseout="removethumb('rec3')">
+				<td>Wednesday</td>
+				<td>Exercise</td>
+				<td>8:30 pm</td>
+				<td>University Recreation and Wellness Center <br> <img class="thumbnail" id="rec3"></td>
+				<td>(612) 626-9222</td>
+				<td><a href="https://recwell.umn.edu/">Rec Center Info</a></td>
+			</tr>-->
+			<tr class="tr2" onmouseover="changeimg('./img/Tate.png', 'Tate hall'); displaythumb('tate2', './img/Tate.png', 'Tate hall')" onmouseout="removethumb('tate2')">
+				<td>Thursday</td>
+				<td>Programming Graphics and Games</td>
+				<td>4:00-5:15 pm</td>
+				<td>Tate Hall<br> <img class="thumbnail" id="tate2"></td>
+				<td>No Phone Number</td>
+				<td><a href="https://onestop2.umn.edu/pcas/viewCatalogCourse.do?courseId=810362">Programming Graphics and Games info</a></td>
+			</tr>
+			<tr class="tr1" onmouseover="changeimg('./img/rec.jpg', 'Rec Center'); displaythumb('rec4', './img/rec.jpg', 'Rec center')" onmouseout="removethumb('rec4')">
+				<td>Thursday</td>
+				<td>Exercise</td>
+				<td>5:30 pm</td>
+				<td>University Recreation and Wellness Center <br> <img class="thumbnail" id="rec4"></td>
+				<td>(612) 626-9222</td>
+				<td><a href="https://recwell.umn.edu/">Rec Center Info</a></td>
+			</tr>
+			<tr class="tr2" onmouseover="changeimg('./img/vincent.jpg', 'Vincent hall'); displaythumb('vincent', './img/vincent.jpg', 'Vincent hall')" onmouseout="removethumb('vincent')">
+				<td>Friday</td>
+				<td>Math Modeling</td>
+				<td>10:10-11:00 am</td>
+				<td>Vincent Hall<br> <img class="thumbnail" id="vincent"></td>
+				<td>No Phone Number</td>
+				<td><a href="https://onestop2.umn.edu/pcas/viewCatalogCourse.do?courseId=004295">Math Modeling info</a></td>
+			</tr>
+			<!--<tr class="tr1" onmouseover="changeimg('./img/rec.jpg', 'Rec Center'); displaythumb('rec5', './img/rec.jpg', 'Rec center')" onmouseout="removethumb('rec5')">
+				<td>Friday</td>
+				<td>Exercise</td>
+				<td>8:30 pm</td>
+				<td>University Recreation and Wellness Center <br> <img class="thumbnail" id="rec5"></td>
+				<td>(612) 626-9222</td>
+				<td><a href="https://recwell.umn.edu/">Rec Center Info</a></td>
+			</tr>-->
+			<tr class="tr2" onmouseover="changeimg('./img/chickfila.jpg', 'chick-fil-a'); displaythumb('chickfila', './img/chickfila.jpg', 'chick-fil-a')" onmouseout="removethumb('chickfila')">
+				<td>Saturday</td>
+				<td>Breakfast</td>
+				<td>1:00 pm</td>
+				<td>615 Washington Ave SE Minneapolis, MN 55414 <br> <img class="thumbnail" id="chickfila"></td>
+				<td>(612) 643-9770</td>
+				<td><a href="https://www.chick-fil-a.com/locations/mn/stadium-village">Spot of sustenance</a></td>
+			</tr>
+			<tr class="tr1" onmouseover="changeimg('./img/rec.jpg', 'Rec Center'); displaythumb('rec6', './img/rec.jpg', 'Rec center')" onmouseout="removethumb('rec6')">
+				<td>Sunday</td>
+				<td>Exercise</td>
+				<td>1:00 pm</td>
+				<td>University Recreation and Wellness Center <br> <img class="thumbnail" id="rec6"></td>
+				<td>(612) 626-9222</td>
+				<td><a href="https://recwell.umn.edu/">Rec Center Info</a></td>
+			</tr>
+		</table>
+		<div >
+			<button id="imgbutton" type="button" onclick="hideimg()">Go Away!</button>
+		</div>
+		<div id="bigimg">
+			<img id="mainimg" src="./img/gophers-mascot.png" alt="Default IMG">
+		</div>
+	</div>
+	<div id="mapcontainer">
+		<div id="steps"></div>
+		<div id="map" onload="initMap()"></div>
+		<div id="containercontainer">
+			<div class="searchcontainer">
+				<div id="selecter">
+					<label for="search">Find</label>
+					<select id="search" name="search">
+						<option value="restaurant">Restaurant</option>
+						<option value="hospital">Hospital</option>
+						<option value="parking">Parking</option>
+						<option value="supermarket">Supermarket</option>
+						<option value="other">Other</option>
+					</select>
+					<input name="other" id="other" type="text" placeholder="Enter other places" disabled>
+				</div>
+				<div class="inlinediv"><p>in</p><input id="meters" type="text" value="500"><p>meters</div>
+				<div><input class="mapbutton" id="searchsubmit" type="button" value="Search"></div>
+			</div>
+			<div class="searchcontainer">
+				<p>Direction to</p>
+				<div class="inlinediv"><input id="to" type="text" value="Coffman Union"><p>by</p></div>
+				<div class="radio">
+					<label for="walk">
+						WALK<input type="radio" id="walk" name="radio1" value="WALKING" checked>
+					</label>
+					<label for="drive">
+						DRIVE<input type="radio" id="drive" name="radio1" value="DRIVING">
+					</label>
+					<label for="trans">
+						TRANSIT<input type="radio" id="trans" name="radio1" value="TRANSIT">
+					</label>
+				</div>
+				<div><input class="mapbutton" id="directionbutton" type="button" value="Go"></div>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script src="myscripts.js"></script>
+<script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkHzK4FvMsqxu3tGhAubsZDDhRd4fYyxk&libraries=places&callback=initMap">
+</script>
