@@ -129,6 +129,7 @@ function txtHandler(results, status, map){
             console.log(results)
             const content = results[i].name + "<br>" + results[i].formatted_address;
             makemark(map, pos, content);
+            map.setCenter(pos);
         }
     }
     else{
