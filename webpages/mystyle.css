@@ -102,6 +102,29 @@ h2 {
     background-color: #152a5f;
 }
 
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.project-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    color: #2853c7;
+    margin-top: 0;
+}
+
 #skills ul {
     list-style-type: none;
     padding: 0;
@@ -131,5 +154,9 @@ footer {
 
     .navcontent {
         margin-bottom: 0.5rem;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
     }
 }
