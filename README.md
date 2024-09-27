@@ -1,6 +1,9 @@
 # Colin White's Projects Site AI Expirement
 I made this website my senior year of college and am now using it as a testing ground to see how much an AI like Claude can improve the look and feel of an already functional website.
 
+##Disclaimer
+Not all the information on this site is accurate as the AI decided to extrapolate information about my life multiple times
+
 # AI Generated Readme:
 ## Overview
 
