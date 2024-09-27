@@ -2,89 +2,116 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-	<title>My Form - Colin White</title>
-    <link rel="stylesheet" href="mystyle.css">
-    <script src="/webpages/displaymenu.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Event - Colin's Portfolio</title>
+    <link rel="stylesheet" href="../mystyle.css">
 </head>
 <body>
-    <nav>
-        <div class="navcontent">
-            <button class="navbutton" onclick="window.location='../index.html'">Home</button>
-        </div>
-        <div class="navcontent" id="nav1">
-            <button class="navbutton" onclick="displaymenu('nav1')">My Webpages</button>
-            <a href="./MySchedule.html">My Schedule</a>
-            <a href="./MyForm.html">My Form</a>
-            <a href="./AboutMe.html">About Me</a>
-        </div>
-        <div class="navcontent" id="nav2">
-            <button class="navbutton" onclick="displaymenu('nav2')">My Games</button>
-            <a href="https://csci-4611-spring-2023.github.io/assignment-1-colinjw458/">Spacestroids</a>
-        </div>
-    </nav>
-
-    <div id="formdiv">
-        <form action="https://www-users.cselabs.umn.edu/~cuixx327/a2.php" method="post">
-            <div class="row">
-                <div class="column"><label for="event">Event:</label></div>
-                <div class="column"><input type="text" id="event" name="event" pattern="^[a-zA-z0-9 ]+" required></div>
+    <header>
+        <h1 class="pagetitle">Add Event to Schedule</h1>
+        <nav>
+            <div class="navcontent">
+                <button class="navbutton" onclick="location.href='../index.html'">Home</button>
             </div>
+            <div id="nav1" class="navcontent">
+                <button class="navbutton">My Webpages</button>
+                <a href="./MySchedule.html">My Schedule</a>
+                <a href="./MyForm.html">My Form</a>
+                <a href="./AboutMe.html">About Me</a>
+            </div>
+            <div id="nav2" class="navcontent">
+                <button class="navbutton">My Projects</button>
+                <a href="https://csci-4611-spring-2023.github.io/assignment-1-colinjw458/">Spacestroids</a>
+                <a href="https://github.com/colinjw458/datamining5523">Data Mining</a>
+                <a href="https://github.com/colinjw458/SQA_comp">SQA Comp</a>
+                <a href="https://github.com/colinjw458/ColinLang">ColinLang</a>
+            </div>
+        </nav>
+    </header>
 
-            <div class="row">
-                <div class="column"><label for="day">Day of Week:</label></div>
-                <div class="column">
-                    <select id="day" name="day" required>
-                        <option value="sun">Sun</option>
-                        <option value="mon">Mon</option>
-                        <option value="tue">Tue</option>
-                        <option value="wed">Wed</option>
-                        <option value="thu">Thu</option>
-                        <option value="fri">Fri</option>
-                        <option value="sat">Sat</option>
-                    </select>
+    <main>
+        <section id="event-form">
+            <form id="add-event-form">
+                <div class="form-group">
+                    <label for="event-name">Event:</label>
+                    <input type="text" id="event-name" name="event-name" required>
                 </div>
-            </div>
 
-            <div class="row">
-                <div class="column"><label for="start">Start:</label></div>
-                <div class="column"><input type="time" id="start" name="start" maxlength="25" required></div>
-            </div>
+                <div class="form-group">
+                    <label>Day of Week:</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="day" value="Sun"> Sun</label>
+                        <label><input type="checkbox" name="day" value="Mon"> Mon</label>
+                        <label><input type="checkbox" name="day" value="Tue"> Tue</label>
+                        <label><input type="checkbox" name="day" value="Wed"> Wed</label>
+                        <label><input type="checkbox" name="day" value="Thu"> Thu</label>
+                        <label><input type="checkbox" name="day" value="Fri"> Fri</label>
+                        <label><input type="checkbox" name="day" value="Sat"> Sat</label>
+                    </div>
+                </div>
 
-            <div class="row">
-                <div class="column"><label for="end">End:</label></div>
-                <div class="column"><input type="time" id="end" name="end" required></div>
-            </div>
+                <div class="form-group">
+                    <label for="start-time">Start:</label>
+                    <input type="time" id="start-time" name="start-time" required>
+                </div>
 
-            <div class="row">
-                <div class="column"><label for="phone">Phone:</label></div>
-                <div class="column"><input type="text" id="phone" name="phone" pattern="^[1-9][0-9]{9}$" required></div>
-            </div>
+                <div class="form-group">
+                    <label for="end-time">End:</label>
+                    <input type="time" id="end-time" name="end-time" required>
+                </div>
 
-            <div class="row">
-                <div class="column"><label for="location">Location (Address):</label></div>
-                <div class="column"><input type="text" id="location" name="location" maxlength="50" pattern="^[a-zA-z0-9 ]+" required></div>
-            </div>
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                </div>
 
-            <div class="row">
-                <div class="column"><label for="extra">Extra Info:</label></div>
-                <div class="column"><input type="text" id="extra" name="extra" maxlength="50" pattern="^[a-zA-z0-9 ]+" required></div>
-            </div>
+                <div class="form-group">
+                    <label for="location">Location (Address):</label>
+                    <input type="text" id="location" name="location" required>
+                </div>
 
-            <div class="row">
-                <div class="column"><label for="url">Enter URL for the Extra Info:</label></div>
-                <div class="column"><input type="url" id="url" name="url"></div>
-            </div>
+                <div class="form-group">
+                    <label for="extra-info">Extra Info:</label>
+                    <textarea id="extra-info" name="extra-info"></textarea>
+                </div>
 
-            <div class="row">
-                <div class="column"></div>
-                <div class="column"><input type="submit" value="Submit"></div>
-            </div>
-        </form>
-        <div id="aboutmap" onload="initMap()"></div>
-    </div>
+                <div class="form-group">
+                    <label for="url">Enter URL for the Extra Info:</label>
+                    <input type="url" id="url" name="url">
+                </div>
+
+                <div class="form-group">
+                    <button type="submit">Add Event</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="map-section">
+            <h2>Event Location</h2>
+            <div id="map"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Colin's Coding Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script>
+        function initMap() {
+            const map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 44.9740, lng: -93.2277},
+                zoom: 14
+            });
+        }
+
+        document.getElementById('add-event-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Here you would typically send the form data to a server
+            // For now, we'll just log it to the console
+            console.log('Form submitted!');
+            // You could also update the map with the new location here
+        });
+    </script>
 </body>
-
-<script src="myscriptsabout.js"></script>
-<script async
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkHzK4FvMsqxu3tGhAubsZDDhRd4fYyxk&libraries=places&callback=initMap">
-</script>
+</html>
