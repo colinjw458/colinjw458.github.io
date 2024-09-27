@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colin's Coding Portfolio</title>
+    <title>Colin White - Coding Portfolio</title>
+    <link rel="stylesheet" href="mystyle.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/webpages/mystyle.css">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <h1 class="pagetitle">Colin's Coding Journey</h1>
+        <h1 class="pagetitle">Colin White's Coding Journey</h1>
         <nav>
             <div class="navcontent">
                 <button class="navbutton">Home</button>
@@ -22,9 +23,9 @@
             </div>
             <div id="nav2" class="navcontent">
                 <button class="navbutton">My Projects</button>
+                <a href="https://github.com/colinjw458/SQA_comp">SQA Comp</a>
                 <a href="https://csci-4611-spring-2023.github.io/assignment-1-colinjw458/">Spacestroids</a>
                 <a href="https://github.com/colinjw458/datamining5523">Data Mining</a>
-                <a href="https://github.com/colinjw458/SQA_comp">SQA Comp</a>
                 <a href="https://github.com/colinjw458/ColinLang">ColinLang</a>
             </div>
         </nav>
@@ -33,32 +34,44 @@
     <main>
         <section id="intro">
             <h2>Welcome to My Coding Portfolio!</h2>
-            <p>Here you'll find a collection of my projects, skills, and experiences as a coding student and developer.</p>
+            <p>Hi, I'm Colin White, a senior CS major and Math minor from Bend, Oregon. I'm passionate about applying advanced computational techniques to solve complex problems in finance and beyond. Explore my projects and journey below!</p>
         </section>
 
         <section id="featured-project">
-            <h2>Featured Project: Spacestroids</h2>
-            <img id="mainimg" src="path/to/spacestroids-screenshot.jpg" alt="Spacestroids Game Screenshot">
-            <p>Spacestroids is an exciting space-themed game I developed as part of my coursework. It showcases my skills in game development and programming logic.</p>
-            <a href="https://csci-4611-spring-2023.github.io/assignment-1-colinjw458/" class="project-link">Play Spacestroids</a>
+            <h2>Featured Project: SQA Competition - Reinforcement Learning for Portfolio Optimization</h2>
+            <div class="project-showcase">
+                <img id="mainimg" src="path/to/sqa-comp-screenshot.jpg" alt="SQA Competition Project Screenshot">
+                <div class="project-description">
+                    <p>The SQA (Systematic Quantitative Analysis) Competition was an exciting challenge that pitted teams of Quants against each other in a high-stakes portfolio optimization scenario. Our team chose to leverage the power of reinforcement learning to dynamically optimize the weights of stocks in our portfolio.</p>
+                    <p>Key Features:</p>
+                    <ul>
+                        <li>Reinforcement Learning Algorithm: Implemented a state-of-the-art RL model to adapt to market conditions</li>
+                        <li>Dynamic Portfolio Rebalancing: Continuous optimization of stock weights based on real-time market data</li>
+                        <li>Risk Management: Incorporated sophisticated risk metrics to balance returns and volatility</li>
+                        <li>Backtesting Framework: Rigorous historical performance analysis to validate our strategy</li>
+                    </ul>
+                    <p>Our innovative approach allowed us to achieve impressive results, demonstrating the potential of machine learning in quantitative finance.</p>
+                    <a href="https://github.com/colinjw458/SQA_comp" class="project-link">View SQA Comp Project</a>
+                </div>
+            </div>
         </section>
 
         <section id="github-projects">
-            <h2>GitHub Projects</h2>
+            <h2>Other Notable Projects</h2>
             <div class="project-grid">
                 <div class="project-card">
+                    <h3>Spacestroids</h3>
+                    <p>An exciting space-themed game showcasing skills in game development and creative problem-solving.</p>
+                    <a href="https://csci-4611-spring-2023.github.io/assignment-1-colinjw458/" class="project-link">Play Game</a>
+                </div>
+                <div class="project-card">
                     <h3>Data Mining</h3>
-                    <p>A project focused on data mining techniques and applications.</p>
+                    <p>An exploration of data mining techniques and their real-world applications, demonstrating ability to extract insights from large datasets.</p>
                     <a href="https://github.com/colinjw458/datamining5523" class="project-link">View Project</a>
                 </div>
                 <div class="project-card">
-                    <h3>SQA Comp</h3>
-                    <p>Software Quality Assurance comparison project.</p>
-                    <a href="https://github.com/colinjw458/SQA_comp" class="project-link">View Project</a>
-                </div>
-                <div class="project-card">
                     <h3>ColinLang</h3>
-                    <p>A custom programming language project.</p>
+                    <p>A custom programming language project, showcasing deep understanding of compiler design and language theory.</p>
                     <a href="https://github.com/colinjw458/ColinLang" class="project-link">View Project</a>
                 </div>
             </div>
@@ -67,20 +80,40 @@
         <section id="skills">
             <h2>My Skills</h2>
             <ul>
-                <li>HTML/CSS</li>
-                <li>JavaScript</li>
+                <li>Reinforcement Learning</li>
+                <li>Quantitative Analysis</li>
                 <li>Python</li>
-                <li>Game Development</li>
-                <li>Web Design</li>
+                <li>Machine Learning</li>
+                <li>Financial Modeling</li>
                 <li>Data Mining</li>
-                <li>Software Quality Assurance</li>
-                <li>Language Design</li>
+                <li>Algorithm Design</li>
+                <li>Risk Management</li>
+                <li>Statistical Analysis</li>
+                <li>Web Development</li>
             </ul>
+        </section>
+
+        <section id="quick-links">
+            <h2>Quick Links</h2>
+            <div class="quick-links-grid">
+                <a href="./webpages/MySchedule.html" class="quick-link">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>My Schedule</span>
+                </a>
+                <a href="./webpages/MyForm.html" class="quick-link">
+                    <i class="fas fa-edit"></i>
+                    <span>Add Event</span>
+                </a>
+                <a href="./webpages/AboutMe.html" class="quick-link">
+                    <i class="fas fa-user"></i>
+                    <span>About Me</span>
+                </a>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Colin's Coding Portfolio. All rights reserved.</p>
+        <p>&copy; 2024 Colin White's Coding Portfolio. All rights reserved.</p>
     </footer>
 </body>
 </html>
